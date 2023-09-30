@@ -6,17 +6,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
+private TextView tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        this.tv = findViewById(R.id.tv);
     }
 
     public void en8techangetextclick(View view) {
-        Toast.makeText (this, "Some message", Toast.LENGTH_LONG).show();
+        this.tv.setText("changed text");
     }
 }
